@@ -6,7 +6,7 @@
   <div class="panel-body">
     <% @messages.each do |message| %>
       <span class="label label-info"><%= message.name %></span>
-      <%= message.body %>
+      <%= simple_format(h(message.body))%>
       <br>
     <% end %>
   </div>
